@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(359, 46%, 5%);
+    padding: 20px; /* Prevents touching screen edges */
+    box-sizing: border-box;
+}
+
+#calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(349, 73%, 96%);
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px; /* Maximum size on desktop */
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+
+#display {
+    width: 100%;
+    padding: 30px 20px;
+    font-size: clamp(2rem, 10vw, 4rem); /* Text shrinks on small screens */
+    text-align: right; /* Standard calculator look */
+    border: none;
+    background-color: hsl(359, 46%, 82%);
+    color: white;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+button {
+    aspect-ratio: 1 / 1; /* Keeps buttons perfectly circular */
+    width: 100%; 
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(359, 46%, 82%);
+    color: white;
+    font-size: clamp(1.2rem, 5vw, 2rem); /* Dynamic font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Hover & Active States */
+button:hover { background-color: hsl(359, 46%, 62%); }
+button:active { transform: scale(0.95); }
+
+/* Color Variations */
+.operator { background-color: hsl(359, 46%, 65%); }
+.btn { background-color: hsl(359, 46%, 72%); }
+
+/* Mobile Adjustment for very small screens */
+@media (max-width: 350px) {
+    #keys {
+        gap: 8px;
+        padding: 10px;
+    }
+}
