@@ -14,7 +14,7 @@ A simple and interactive **web-based calculator** built using **HTML**, **CSS**,
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 calculator/
